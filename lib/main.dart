@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qrscanner/pages/qr_generator.dart';
 import 'package:qrscanner/pages/qr_scanner.dart';
+import 'package:qrscanner/pages/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,16 +16,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-      
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       routes: {
-        "/generate": (context)=> const QrGenerator(),
-        "/scan":(context)=> const QrScanner()
+        "/splash": (context) => const SplashScreen(),
+        "/generate": (context) => const QrGenerator(),
+        "/scan": (context) => const QrScanner()
       },
-      initialRoute: "/scan",
+      initialRoute: "/splash",
+      debugShowCheckedModeBanner: false,
     );
   }
 }
-

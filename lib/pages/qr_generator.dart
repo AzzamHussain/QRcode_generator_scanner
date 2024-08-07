@@ -15,6 +15,7 @@ class _QrGeneratorState extends State<QrGenerator> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Generate QR Here"),
+        backgroundColor: Colors.yellow,
         actions: [
           IconButton(
               onPressed: () {
